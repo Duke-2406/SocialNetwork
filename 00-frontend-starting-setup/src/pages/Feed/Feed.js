@@ -8,7 +8,6 @@ import Paginator from '../../components/Paginator/Paginator';
 import Loader from '../../components/Loader/Loader';
 import ErrorHandler from '../../components/ErrorHandler/ErrorHandler';
 import './Feed.css';
-import post from '../../components/Feed/Post/Post';
 
 class Feed extends Component {
   state = {
@@ -193,13 +192,13 @@ class Feed extends Component {
         return res.json();
       })
       .then(resData => {
-        const post = {
-          _id: resData.post._id,
-          title: resData.post.title,
-          content: resData.post.content,
-          creator: resData.post.creator,
-          createdAt: resData.post.createdAt
-        };
+        // const post = {
+        //   _id: resData.post._id,
+        //   title: resData.post.title,
+        //   content: resData.post.content,
+        //   creator: resData.post.creator,
+        //   createdAt: resData.post.createdAt
+        // };
         this.setState(prevState => {
           return {
             isEditing: false,
